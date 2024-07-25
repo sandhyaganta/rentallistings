@@ -1,13 +1,101 @@
 <div class="container-fluid con">
-    <div class="row">
-        <div class="col-sm-4 m-auto ps-2 pe-2">
-            <div class="card card1 rounded" >
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+  <div class="row">
+    <div class="col-sm-4 m-auto">
+      <div class="card card1" *ngIf="!isCardVisible"  @slideInOut>
+        <div class="card-header text-center border-0">
+          <img
+            class="mt-2 mb-2"
+            width="43%"
+            height="40%"
+            src="\assets\logo.png"
+          />
+        </div>
+        <div class="card-body">
+          <div class="p-3">
+            <h4>SIGN IN</h4>
+            <div class="row">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="pass"
+                  id="user"
+                  ng-model="email"
+                />
+                <label for="user" class="animated-label">Email</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="pass"
+                  id="pass"
+                  ng-model="passWord"
+                />
+                <label for="pass" class="animated-label">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <input
+                  type="checkbox"
+                  id="Remember me"
+                  name="Remember me"
+                  value="Remember me"
+                  class="rem p-2"
+                />
+                <label for="Remember me" class="ms-1 rem1"> Remember me</label>
               </div>
 
+              <div class="col-sm-6">
+                <button
+                  class="btn border-0 btn1"
+                  type="submit"
+                  (click)="forgot()"
+                >
+                  <span><i class="bi bi-lock-fill me-2"></i></span>Forgot pwd ?
+                </button>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row mt-3 mb-4">
+            <button class="btn btn-2 m-auto border" type="submit" routerLink="/dash">
+              LOG IN
+            </button>
+          </div>
         </div>
+      </div>
+      <div class="card card1" *ngIf="isCardVisible"  @slideInOut>
+        <div class="p-3">
+          <p class="h5tag mt-2">Recover Password</p>
+          <p class="rem1">Enter your Email and instructions will be sent to you! </p>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              name="pass"
+              id="user"
+              ng-model="email"
+            />
+            <label for="user" class="animated-label">EmailId</label>
+          </div>
+          <div class="text-center mt-4 mb-3">
+            <button class="btn btn-2 m-auto border" type="submit">
+              RE SET
+            </button>
+          </div>
+          <button
+          class="btn border-0 btn1"
+          type="submit"
+          (click)="forgot()"
+        >
+          <span><i class="bi bi-lock-fill "></i></span>Log In
+        </button>
+         
+
+        </div>
+      </div>
     </div>
+  </div>
 </div>
