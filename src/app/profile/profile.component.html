@@ -1,0 +1,105 @@
+<div class="container con">
+  <div class="row p-1 mb-3" style="background-color: #ffffff; color: #58666e">
+    <div class="col-sm-10">
+      <h4 class="mt-3 ms-2 fw-bold">Profile</h4>
+    </div>
+    <div class="col-sm-2">
+      <p class="ptag" routerLink="dash/home1">
+        Home<span class="pan">/profile</span>
+      </p>
+    </div>
+  </div>
+  <div class="row mt-2 mb-3 p-2">
+    <div class="col-sm-4 ">
+        <div class="card car" >
+            <img src="\assets\user-icon.png" class="card-img-top p-4" alt="...">
+            <div class="card-body text-center">
+              <p class="card-text fs-4">Admin</p>
+              <p class="text-secondary">rudra.pranay&commat;gmail.com</p>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm-8 ">
+        <div class="card car p-4">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0" role="tab" aria-controls="simple-tabpanel-0" aria-selected="true">
+                    UpdateProfile
+                </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab" aria-controls="simple-tabpanel-1" aria-selected="false">
+                    ChangePassword
+                </a>
+                </li>
+                
+              </ul>
+              <div class="tab-content pt-5" id="tab-content">
+                <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
+                    <label class=" fw-bold">FullName</label>
+                    <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="pass"
+                          id="user"
+                          ng-model="text"
+                        />
+                        <label for="user" class="animated-label">Admin</label>
+                      </div>
+                      <label class=" fw-bold">Email</label>
+                      <div class="form-floating mb-3">
+                        <input type="email" readonly class="form-control-plaintext text-secondary bg-secondary-subtle" id="floatingPlaintextInput" placeholder="rudra.pranay@example.com" value="rudra.pranay@example.com" />
+                       
+                      </div>
+                      <label class=" fw-bold">ProfilePicture</label><br>
+                      <button class="btn btn-primary mt-1" type="file">choosefile</button><br>
+                      <button class="btn btn-primary mt-3" type="submit">Save</button>
+
+
+
+                </div>
+                <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
+                    <label class=" fw-bold">Current Password</label>
+                    <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="pass"
+                          id="user"
+                          ng-model="text"
+                        />
+                        <label for="user" class="animated-label">Current Password</label>
+                      </div>
+                      <label class=" fw-bold">NewPassword</label>
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="pass"
+                          id="user"
+                          ng-model="email"
+                        />
+                        <label for="user" class="animated-label">NewPassword</label>
+                      </div>
+                      <label class=" fw-bold">Confirm Password</label>
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="pass"
+                          id="user"
+                          ng-model="email"
+                        />
+                        <label for="user" class="animated-label">Confirm Password</label>
+                      </div>
+                      <button class="btn btn-primary mt-3" type="submit">Save</button>
+
+                </div>
+                
+              </div>
+              
+        </div>
+    </div>
+  </div>
+</div>
