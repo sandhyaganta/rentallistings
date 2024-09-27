@@ -1,0 +1,267 @@
+.header{
+    background-color: white;
+}
+/* .bt1{
+    border: none;
+    text-decoration: underline;
+} */
+.bt1 {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  .bt1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: blue;
+    transition: width 0.5s ease;
+  }
+  
+  .bt1:hover::after {
+    width: 100%;
+  }
+  .r2{
+    background-image: url("../../assets/bg-home.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    width: 100%;
+    height: 480px;
+   
+  }
+  .tag3{
+    position: relative;
+    /* padding-right: 50%; */
+  }
+  .tagse{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  .nlabel{
+    font-size: larger;
+    color: #58666E;
+  }
+  .card-header{
+    background-color: none;
+    border: none;
+  
+  }
+  .car{
+    border: none;
+    border-radius: 0%;
+  }
+  .accbut{
+    background-color: none;
+    border: none;
+    display: inline;
+    position: static;
+    width: 100px;  /* Set your desired width */
+  height: 40px;  /* Set your desired height */
+  line-height: 40px;  /* Adjust line height to vertically center the text */
+  padding: 0;  /* Adjust padding if necessary */
+  font-size: 11px;
+   
+  }
+  .input{
+   text-decoration: none;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:black; /* Default color for dots */
+    margin: 1px 3px; /* Spacing between dots */
+  }
+  
+  .carousel-indicators [data-bs-target].active {
+    background-color: #9b9797; /* Color for active dot */
+  }
+  .card-bottom{
+    width: 100%;
+    height: 30%;
+    background-color: #9b9797;
+    color: black;
+  }
+  
+  .car1 {
+    width: 18rem;
+    margin: 50px auto;
+    animation: zoomIn 1s ease-out forwards;
+  }
+
+  /* Keyframes for zoom-in effect */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.5); /* Start at 50% size */
+      opacity: 0;
+    }
+    to {
+      transform: scale(1); /* Full size */
+      opacity: 1;
+    }
+  }
+.card-end{
+  background-color: navy;
+  color: white;
+}
+.card-end1{
+  background-color: #9b9797;
+  color: #58666E;
+}
+.card-end2{
+  background-color: orange;
+  color:black;
+}
+.card-left, .card-right {
+  opacity: 0;
+  position: relative;
+  animation: moveIn 1s ease forwards;
+}
+
+.card-left {
+  left: -100%;
+  animation-delay: 0.2s;
+}
+
+.card-right {
+  right: -100%;
+  animation-delay: 0.4s;
+}
+
+@keyframes moveIn {
+  to {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+.rr{
+  background-color: #FAFAFA;
+}
+.image-container {
+  position: relative; /* Creates a stacking context for the title */
+  width: 230px;
+  height: 260px; /* Adjust this based on your image size */
+  overflow: hidden;
+}
+
+.moving-image {
+  position: absolute;
+  bottom: -100%; /* Initially off the container */
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensures the image takes full height */
+  z-index: 1; /* Ensure image is behind the title */
+  animation: moveUp 3s ease-in-out forwards;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the image */
+  left: 0;
+  width: 100%; /* Ensure the title spans the entire width */
+  font-size: 24px;
+  color: white; /* White text color */
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for readability */
+  padding: 10px 0; /* Padding for better appearance */
+  text-align: center; /* Center the text */
+  z-index: 2; /* Ensure the title appears in front of the image */
+}
+
+/* Zoom out when hovering over the image */
+.moving-image:hover {
+  transform: scale(1.2); /* Zoom in effect */
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%; /* Start from off-screen (bottom) */
+  }
+  100% {
+    bottom: 0; /* Move up to the top of the container */
+  }
+}
+.space{
+  background-color: #FAFAFA;
+  color:#696969;
+    height: 150%;  
+   margin-top: 5%;   
+}
+.card1{
+  background-color: white;
+  
+}
+.divider{
+  display: block;
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #1777f1;
+}
+
+.card-img-bottom{
+  width: 50%;
+  height: 35%;
+}
+
+/* Keyframes for bottom-to-top animation */
+  /* @keyframes moveUp {
+  0% {
+    transform: translateY(100px); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}   */
+
+/* Apply the animation to all cards */
+.card1 {
+  animation: moveUp 1s ease-in-out; /* All cards animate together */
+  opacity: 1; /* Ensure visibility after the animation */
+}
+
+.img1 {
+  opacity:0.4 ; /* Completely transparent initially */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.img1:hover {
+  opacity: 1; /* Fully visible when hovered */
+}
+
+.rf{
+  background-color: black;
+  color:white;
+}
+.fimg {
+    filter: brightness(0) invert(1); 
+    
+    
+} 
+pre{
+  opacity:0.7 ; /* Completely transparent initially */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+
+}
+pre:hover {
+  opacity: 1; /* Fully visible when hovered */
+}
+
+
+
+

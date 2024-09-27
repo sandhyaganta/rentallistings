@@ -3,11 +3,12 @@ import { AgFrameworkComponent, AgGridModule } from 'ag-grid-angular';
 import { ViewVisitComponent } from '../view-visit/view-visit.component';
 
 import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-properties',
   standalone: true,
-  imports: [AgGridModule],
+  imports: [AgGridModule,RouterLink],
   schemas: [NO_ERRORS_SCHEMA],
   templateUrl: './properties.component.html',
   styleUrl: './properties.component.css'

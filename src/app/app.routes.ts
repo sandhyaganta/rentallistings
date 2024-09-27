@@ -7,6 +7,7 @@ import { UsersComponent } from './users/users.component';
 import { CompainesComponent } from './compaines/compaines.component';
 import { PropertymanagersComponent } from './propertymanagers/propertymanagers.component';
 import { ProfileComponent } from './profile/profile.component';
+import { Home2Component } from './home2/home2.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'home',pathMatch:'full'},
@@ -18,5 +19,6 @@ export const routes: Routes = [
         {path:'compaines',component:CompainesComponent},
         {path:'pmanagers',component:PropertymanagersComponent},
         {path:'profile',component:ProfileComponent}
-    ] }
+    ] },
+    {path:'home2',component:Home2Component}
 ];

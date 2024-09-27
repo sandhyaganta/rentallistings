@@ -33,181 +33,172 @@
             >
           </mat-expansion-panel-header>
           <mat-nav-list>
-            <a  mat-list-item routerLink="profile"><span><i class="bi bi-person text-white"></i></span>Profile</a>
-            <a mat-list-item  routerLink="/home"><span><i class="bi bi-box-arrow-up text-white"></i></span>logout</a>
-            
+            <a mat-list-item routerLink="profile"
+              ><span><i class="bi bi-person text-white"></i></span>Profile</a
+            >
+            <a mat-list-item routerLink="/home"
+              ><span><i class="bi bi-box-arrow-up text-white"></i></span
+              >logout</a
+            >
           </mat-nav-list>
         </mat-expansion-panel>
-		<mat-divider></mat-divider>
-		<div>
-			<h4>---MAIN MENU</h4>
-		</div>
+        <mat-divider></mat-divider>
+        <div>
+          <h4>---MAIN MENU</h4>
+        </div>
 
         <a
           mat-list-item
           (click)="toggleActive($event)"
           matTooltip="Home"
           matTooltipPosition="right"
-		  routerLink="home1"
+          routerLink="home1"
         >
-		<i class="bi bi-house-door-fill" ></i>
-          <span class="ms-3" matLine *ngIf="isExpanded" 
-            >Home</span
-          >
+          <i class="bi bi-house-door-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Home</span>
         </a>
-        <a mat-list-item (click)="toggleActive($event)"
-		matTooltip="Properties"
-		matTooltipPosition="right"
-		routerLink="properties"
-		>
-			<i class="bi bi-house-door-fill"></i>
+        <a
+          mat-list-item
+          (click)="toggleActive($event)"
+          matTooltip="Properties"
+          matTooltipPosition="right"
+          routerLink="properties"
+        >
+          <i class="bi bi-house-door-fill"></i>
           <span class="ms-3" matLine *ngIf="isExpanded">Properties</span>
         </a>
-        <a mat-list-item (click)="toggleActive($event)"
-		matTooltip="users"
-		matTooltipPosition="right"
-		routerLink="user"
-
-		>
-			<i class="bi bi-people-fill"></i>
+        <a
+          mat-list-item
+          (click)="toggleActive($event)"
+          matTooltip="users"
+          matTooltipPosition="right"
+          routerLink="user"
+        >
+          <i class="bi bi-people-fill"></i>
           <span class="ms-3" matLine *ngIf="isExpanded">Users</span>
         </a>
-        <a mat-list-item (click)="toggleActive($event)"
-		matTooltip="compaines"
-		matTooltipPosition="right"
-		routerLink="compaines"
-
-		>
-			<i class="bi bi-building"></i>
+        <a
+          mat-list-item
+          (click)="toggleActive($event)"
+          matTooltip="compaines"
+          matTooltipPosition="right"
+          routerLink="compaines"
+        >
+          <i class="bi bi-building"></i>
           <span class="ms-3" matLine *ngIf="isExpanded">Companies</span>
         </a>
         <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-person-fill"></i>
+          <i class="bi bi-person-fill"></i>
           <span class="ms-3" matLine *ngIf="isExpanded">Property Managers</span>
         </a>
         <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-people-fill"></i>
+          <i class="bi bi-people-fill"></i>
           <span class="ms-3" matLine *ngIf="isExpanded">Landord's</span>
         </a>
-		<a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-person-plus-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Subscriptions</span>
-		  </a>
-		  <mat-expansion-panel [class.mat-elevation-z0]="true">
-			<mat-expansion-panel-header>
-				<i class="bi bi-box2-fill"></i><span
-				class="ms-2"
-				matLine
-				*ngIf="isExpanded"
-				>SErvice Suppliers</span
-			  >
-			</mat-expansion-panel-header>
-			<mat-nav-list>
-			  <a mat-list-item routerLink="#">Spring</a>
-			  <a mat-list-item routerLink="#">Hibernate</a>
-			  <a mat-list-item routerLink="#">Struts</a>
-			</mat-nav-list>
-		  </mat-expansion-panel>
-		  <mat-expansion-panel [class.mat-elevation-z0]="true">
-			<mat-expansion-panel-header>
-				<i class="bi bi-box2-fill"></i><span
-				class="ms-2"
-				matLine
-				*ngIf="isExpanded"
-				>Locations</span
-			  >
-			</mat-expansion-panel-header>
-			<mat-nav-list>
-			  <a mat-list-item routerLink="#">Spring</a>
-			  <a mat-list-item routerLink="#">Hibernate</a>
-			  <a mat-list-item routerLink="#">Struts</a>
-			</mat-nav-list>
-		  </mat-expansion-panel>
-		  <mat-expansion-panel [class.mat-elevation-z0]="true">
-			<mat-expansion-panel-header>
-				<i class="bi bi-box2-fill"></i><span
-				class="ms-2"
-				matLine
-				*ngIf="isExpanded"
-				>Settings</span
-			  >
-			</mat-expansion-panel-header>
-			<mat-nav-list>
-			  <a mat-list-item routerLink="#">Spring</a>
-			  <a mat-list-item routerLink="#">Hibernate</a>
-			  <a mat-list-item routerLink="#">Struts</a>
-			</mat-nav-list>
-		  </mat-expansion-panel>
-		  
-		
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-gear-wide-connected"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Matintenance Mode</span>
-		  </a>
-		   <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-building-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">PropertySchedule</span>
-		  </a>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-clock-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Property Visits</span>
-		  </a> 
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-postcard-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Promotions</span>
-		  </a> 
-		  <mat-expansion-panel [class.mat-elevation-z0]="true">
-			<mat-expansion-panel-header>
-				<i class="bi bi-box2-fill"></i><span
-				class="ms-2"
-				matLine
-				*ngIf="isExpanded"
-				>Website</span
-			  >
-			</mat-expansion-panel-header>
-			<mat-nav-list>
-			  <a mat-list-item routerLink="#">Spring</a>
-			  <a mat-list-item routerLink="#">Hibernate</a>
-			  <a mat-list-item routerLink="#">Struts</a>
-			</mat-nav-list>
-		  </mat-expansion-panel>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-table"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Blogs</span>
-		  </a>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-chat-right-quote-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Testimation</span>
-		  </a>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-file-earmark-text-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Terms&Conditions</span>
-		  </a>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-file-earmark-text-fill"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">PrivacyPolicy</span>
-		  </a>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-person-fill-gear"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Management</span>
-		  </a>
-		  <a mat-list-item (click)="toggleActive($event)">
-			<i class="bi bi-graph-up-arrow"></i>
-			<span class="ms-3" matLine *ngIf="isExpanded">Analytics</span>
-		  </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-person-plus-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Subscriptions</span>
+        </a>
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header>
+            <i class="bi bi-box2-fill"></i
+            ><span class="ms-2" matLine *ngIf="isExpanded"
+              >SErvice Suppliers</span
+            >
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="#">Spring</a>
+            <a mat-list-item routerLink="#">Hibernate</a>
+            <a mat-list-item routerLink="#">Struts</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header>
+            <i class="bi bi-box2-fill"></i
+            ><span class="ms-2" matLine *ngIf="isExpanded">Locations</span>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="#">Spring</a>
+            <a mat-list-item routerLink="#">Hibernate</a>
+            <a mat-list-item routerLink="#">Struts</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header>
+            <i class="bi bi-box2-fill"></i
+            ><span class="ms-2" matLine *ngIf="isExpanded">Settings</span>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="#">Spring</a>
+            <a mat-list-item routerLink="#">Hibernate</a>
+            <a mat-list-item routerLink="#">Struts</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
 
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-gear-wide-connected"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Matintenance Mode</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-building-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">PropertySchedule</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-clock-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Property Visits</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-postcard-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Promotions</span>
+        </a>
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header>
+            <i class="bi bi-box2-fill"></i
+            ><span class="ms-2" matLine *ngIf="isExpanded">Website</span>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="#">Spring</a>
+            <a mat-list-item routerLink="#">Hibernate</a>
+            <a mat-list-item routerLink="#">Struts</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-table"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Blogs</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-chat-right-quote-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Testimation</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-file-earmark-text-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Terms&Conditions</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-file-earmark-text-fill"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">PrivacyPolicy</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-person-fill-gear"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Management</span>
+        </a>
+        <a mat-list-item (click)="toggleActive($event)">
+          <i class="bi bi-graph-up-arrow"></i>
+          <span class="ms-3" matLine *ngIf="isExpanded">Analytics</span>
+        </a>
       </mat-nav-list>
     </mat-sidenav>
 
     <div class="example-sidenav-content">
       <router-outlet></router-outlet>
-	  <div class=" row    " style="bottom: 0;">
-		<div class="row p-2" style="background-color: #ffffff;color: #58666E;">
-		  <p class="mt-3 ms-2 ">Copyright © 2023 <span class="pan">PS4WORKS.</span>  All rights reserved.</p>
-		  
-		  
-		</div>
-	  </div>
+      <div class="row" style="bottom: 0">
+        <div class="row p-2" style="background-color: #ffffff; color: #58666e">
+          <p class="mt-3 ms-2">
+            Copyright © 2023 <span class="pan">PS4WORKS.</span> All rights
+            reserved.
+          </p>
+        </div>
+      </div>
     </div>
   </mat-sidenav-container>
 </div>
